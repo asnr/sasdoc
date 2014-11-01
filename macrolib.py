@@ -6,6 +6,7 @@ class MacroLib:
         
     def add_macro(self, macro):
         self._macros.append(macro)
+        return self
 
     def make_reST(self):
         macro_reSTs = [ m.make_reST() for m in self._macros ]
