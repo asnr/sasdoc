@@ -1,3 +1,4 @@
 *.pyc
 *.sas
 *.rst
+.DS_Store
