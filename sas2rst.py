@@ -71,4 +71,4 @@ if __name__ == '__main__':
     # print(Root(Path(sys.argv[1])).make_reST())
     
     builder = Builder(Path(sys.argv[1]))
-    builder.build_reST_files()
+    builder.write_reST_files()
