@@ -8,9 +8,32 @@ class Root:
 
 
     def make_reST(self):
-        head = '.. toctree::\n\n'
+
+        head = """.. tmp_test documentation master file, created by
+   sphinx-quickstart on Sun Nov  2 11:57:47 2014, modified by Andres later.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to auto-generated docs
+==============================
+
+Contents:
+
+.. toctree::
+
+"""
+
         children = ''.join([ '   ' + p + '\n' for p in self._child_docs ])
-        return head + children
+
+        foot = """
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+"""
+        return head + children + foot
 
 
 
