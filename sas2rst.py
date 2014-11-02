@@ -15,3 +15,4 @@ if __name__ == '__main__':
     
     builder = Builder(Path(sys.argv[1]))
     builder.write_reST_files()
+    builder.copy_reST_files(Path(sys.argv[2]))

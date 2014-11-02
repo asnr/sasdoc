@@ -1,5 +1,7 @@
 from pathlib import Path
 
+# Should probably inherit from Path...
+
 class ReSTPath:
 
     REST_EXT = '.rst'
