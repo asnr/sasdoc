@@ -17,6 +17,11 @@ class ReSTPath:
     def docname(self, root_dir):
         return str(self._src_parent.relative_to(root_dir) / self._src_stem)
 
+    # two args are paths
+    def reST_root_change(self, src_dir, dst_dir):
+        dst_path = dst_dir / self.reST_path().relative_to(src_dir)        
+        return dst_path
+
 
 class SrcPath(ReSTPath):
 

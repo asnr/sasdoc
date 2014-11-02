@@ -14,5 +14,5 @@ if __name__ == '__main__':
     # print(Root(Path(sys.argv[1])).make_reST())
     
     builder = Builder(Path(sys.argv[1]))
-    builder.write_reST_files()
-    builder.copy_reST_files(Path(sys.argv[2]))
+    builder.write_reST_files(Path(sys.argv[2]))
+    # builder.copy_reST_files(Path(sys.argv[2]))
