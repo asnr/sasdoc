@@ -7,7 +7,9 @@ def search_dir_for_extension(dir_path, ext=''):
     # Warning! In "large directory trees may consume 
     # an inordinate amount of time", in which case use
     # return [ f for f in dir_path.iterdir() if f.suffix() == ext ]
-    return dir_path.glob('**/*' + ext)
+    paths = dir_path.glob('**/*' + ext)
+
+    return paths
 
 
 def search_dir_for_sas(dir_path):

@@ -30,7 +30,9 @@ class Builder:
             with open(str(src.sas_path())) as fp:
                 sas_src_str = fp.read()
 
-            reST_str = simple_sas_2_rst(sas_src_str).make_reST()
+            macro_lib = simple_sas_2_rst(sas_src_str)
+            macro_lib.add_src_path(src.sas_path().resolve())
+            reST_str = macro_lib.make_reST()
             
             out_path = src.reST_root_change(self._dir_path, dst_dir)
             makedirs(str(out_path.parent), exist_ok=True)

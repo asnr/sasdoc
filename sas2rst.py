@@ -6,13 +6,8 @@ from builder import Builder
 
 if __name__ == '__main__':
     
-    # with open(sys.argv[1]) as fp:
-    #     s = fp.read()
-
-    # print(sas_source_2_rst(s))
-    # print(simple_sas_2_rst(s))
-    # print(Root(Path(sys.argv[1])).make_reST())
+    src_dir = Path(sys.argv[1])
     
-    builder = Builder(Path(sys.argv[1]))
+    builder = Builder(src_dir)
     builder.write_reST_files(Path(sys.argv[2]))
     # builder.copy_reST_files(Path(sys.argv[2]))
