@@ -29,7 +29,7 @@ class MacroLib:
         if self._src_path is not None:
             intro="""The SAS source file for this library is here:
 
-{src_path}
+``{src_path}``
 
 To include this library in your code, use::
 
