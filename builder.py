@@ -18,9 +18,7 @@ class Builder:
     def __init__(self, dir_path):
         self._srcs = [ SrcPath(p) for p in search_dir_for_sas(dir_path) ]
         self._dir_path  = dir_path
-        # self._root_path = ReSTPath(self._dir_path /
-        #                            (self.__ROOT_STEM + ReSTPath.REST_EXT))
-
+        
 
     def write_reST_files(self, dst_dir):
 
