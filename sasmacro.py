@@ -1,5 +1,7 @@
 from sphinxdoc import SphinxDocString
-from simpledocstrings import ArbitraryDocString, ReSTDocString
+from simpledocstrings import ArbitraryDocString
+from simpledocstrings import ReSTDocString
+from simpledocstrings import VerbatimDocString
 
 class SASMacro:
 
@@ -20,7 +22,7 @@ class SASMacro:
             comment = comment[len(self._reST_PREFIX):]
             self._doc_string = ReSTDocString(comment)
         else:
-            self._doc_string = ArbitraryDocString(comment)
+            self._doc_string = VerbatimDocString(comment)
 
 
     def make_reST(self):

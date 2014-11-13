@@ -1,4 +1,5 @@
 import re
+from textwrap import indent
 
 class ArbitraryDocString:
 
@@ -30,3 +31,12 @@ class ReSTDocString:
 
     def __str__(self):
         return self._comment_str
+
+
+class VerbatimDocString:
+
+    def __init__(self, comment_str):
+        self._comment_str = comment_str
+
+    def __str__(self):
+        return '::\n\n' + indent(self._comment_str, ' '*4)
