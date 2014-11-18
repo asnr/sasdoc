@@ -20,6 +20,7 @@ Welcome to auto-generated docs
 Contents:
 
 .. toctree::
+   :maxdepth: 1
 
 """
 

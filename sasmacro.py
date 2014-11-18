@@ -27,7 +27,8 @@ class SASMacro:
 
     def make_reST(self):
         out = []  # put everything in here instead of adding bit by bit?
-        out += [self._name]
+        out += [self._name] # + 
+               # str(self._position_params) + str(self._keyword_params)]
         out += ['-'*len(self._name)]
         out += [str(self._doc_string) if self._doc_string is not None else '']
         return '\n'.join(out)
